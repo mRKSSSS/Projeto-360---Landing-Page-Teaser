@@ -1,0 +1,74 @@
+.nav-v2{
+    font-family: $main-font;
+    a, input, button{
+        font-size: 15px;
+    }
+    nav{
+        background-color: rgba(0,0,0,0.8) !important;
+        padding: 12px 80px;
+        @include mq(large){
+            padding: 12px 60px;
+        }
+        @include mq(medium){
+            padding: 12px 30px;
+        }
+        @include mq(small){
+            padding: 12px 20px;
+        }
+        .navbar-brand{
+            img{
+                width: 110px;
+            }
+        }
+        .navbar-toggler{
+            position: relative;
+            width: 32px;
+            height: 32px;
+            border: none;
+            outline: none;
+            span{
+                display: block;
+                position: absolute;
+                left: 1px;
+                width: 30px;
+                height: 2px;
+                border-radius: 5px;
+                background-color: lightgray;
+                transition: all .5s ease;
+                &:nth-child(1){
+                    top: 5px;
+                }
+                &:nth-child(2){
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:nth-child(3){
+                    bottom: 5px;
+                }
+                &.open{
+                    &:nth-child(1){
+                      top: 15px;
+                      transform: rotate(45deg);
+                    }
+                    &:nth-child(2){
+                      width: 0;
+                      opacity: 0;
+                    }
+                    &:nth-child(3){
+                      transform: rotate(-45deg);
+                      bottom: 15px;
+                    }
+                  }
+            }
+        }
+        #navbarSupportedContent{
+            .navbar-nav{
+                .nav-item{
+                    a{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

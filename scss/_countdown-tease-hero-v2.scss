@@ -1,0 +1,226 @@
+.countdownv2{
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    background-color: $black;
+    position: relative;
+    .logo{
+        width: 120px;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    .title{
+        width: 140px;
+        position: absolute;
+        top: 20%;
+        left: 16%;
+        z-index: 1;
+        h1{
+            font-family: $title-font;
+            font-size: 30px;
+            color: $white;
+            @include mq(medium){
+                font-size: 26px;
+            }
+        }
+        &:after{
+            content: '';
+            display: block;
+            height: 4px;
+            width: 50px;
+            background-color: $red;
+            margin-top: 14px;
+        }
+    }
+    .countdown-container{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        padding: 20px;
+        background-color: $black;
+        color: $white;
+        ul{
+            @include mq(medium){
+                margin: 12px 0;
+            }
+            @include mq(small){
+                margin: 36px 0;
+            }
+            li{
+                display: inline-block;
+                list-style: none;
+                padding: 0 25px;
+                @include mq(large){
+                    padding: 0 15px;
+                }
+                @include mq(medium){
+                    padding: 0 5px;
+                }
+                span{
+                    display: inline-block;
+                    width: 100px;
+                    font-family: $title-font;
+                    font-size: 156px;
+                    letter-spacing: 4px;
+                    &.fixed{
+                        opacity: 0.1;
+                        color: black;
+                        text-shadow:
+                            -1px -1px 0 #FFF,  
+                            1px -1px 0 #FFF,
+                            -1px 1px 0 #FFF,
+                            1px 1px 0 #FFF;
+                    }
+                    @include mq(large){
+                        font-size: 126px;
+                    }
+                    @include mq(medium){
+                        width: 70px;
+                        font-size: 96px;
+                    }
+                    @include mq(small){
+                        width: 50px;
+                        font-size: 56px;
+                    }
+                }
+            }
+        }
+    }
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,0,0,1) 90%, rgba(255,0,0,0) 100%);
+        z-index: 1;
+    }
+    .email-form{
+        position: absolute;
+        bottom: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        @include custom-mq(0px, 810px){
+            bottom: 120px;
+        }
+        @include mq(medium){
+            width: 60%;
+        }
+        h1{
+            font-family: $title-font;
+            font-size: 22px;
+            letter-spacing: 1px;
+            color: $white;
+            margin-bottom: 6px;
+            @include mq(medium){
+                font-size: 20px;
+            }
+        }
+        input[type="email"]{
+            width: 300px;
+            height: 40px;
+            padding: 0 8px;
+            color: $white;
+            background-color: $black;
+            border: 1px solid $white;
+            margin-right: 6px;
+            outline: none;
+            margin-top: -1px;
+            @include custom-mq(0px, 810px){
+                width: 100%;
+                margin-bottom: 4px;
+            }
+        }
+        input[type="submit"]{
+            height: 40px;
+            font-family: $title-font;
+            font-size: 16px;
+            letter-spacing: 1px;
+            padding: 0 26px;
+            vertical-align: bottom;
+            color: $white;
+            border: 1px solid $red;
+            background-color: $red;
+            outline: none;
+            cursor: pointer;
+            transition: all .4s ease;
+            &:hover{
+                background-color: $white;
+                color: $red;
+                border: 1px solid $white;
+            }
+            @include custom-mq(0px, 810px){
+                width: 100%;
+            }
+        }
+    }
+    .scroll-down{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        text-align: center;
+        h1{
+            font-family: $title-font;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: $white;
+            margin-bottom: 5px;
+            @include mq(medium){
+                font-size: 18px;
+            }
+        }
+        .scroll-icon{
+            width: 16px;
+            margin: 0 auto;
+            padding-left: 5px;
+            cursor: pointer;
+            i{
+                display: block;
+                width: 10px;
+                height: 10px;
+                transform: rotate(45deg);
+                transform-origin: 20% 40%;
+                border: solid $white;
+                border-width: 0 1px 1px 0;
+                &:nth-of-type(1){
+                    animation: scrollDownAnim1 2s infinite;
+                }
+                &:nth-of-type(2){
+                    animation: scrollDownAnim2 2s infinite;
+                }
+                @keyframes scrollDownAnim1{
+                    0% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+                @keyframes scrollDownAnim2{
+                    0% {
+                        opacity: 0;
+                    }
+                    50% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}

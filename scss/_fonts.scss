@@ -1,0 +1,84 @@
+/* Volvo Font for Main Titles */
+@font-face {
+    font-family: 'VolvoBroad';
+    src: url('../fonts/VolvoBroad.eot');
+    src: url('../fonts/VolvoBroad.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VolvoBroad.woff2') format('woff2'),
+        url('../fonts/VolvoBroad.woff') format('woff'),
+        url('../fonts/VolvoBroad.ttf') format('truetype'),
+        url('../fonts/VolvoBroad.svg#VolvoBroad') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Volvo Font for Subtitles and Text (sans-serif) */
+@font-face {
+    font-family: 'VolvoSans';
+    src: url('../fonts/VolvoSans.eot');
+    src: url('../fonts/VolvoSans.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VolvoSans.woff2') format('woff2'),
+        url('../fonts/VolvoSans.woff') format('woff'),
+        url('../fonts/VolvoSans.ttf') format('truetype'),
+        url('../fonts/VolvoSans.svg#VolvoSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Volvo Font for Subtitles and Text (serif) */
+@font-face {
+    font-family: 'VolvoSerif';
+    src: url('../fonts/VolvoSerif.eot');
+    src: url('../fonts/VolvoSerif.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VolvoSerif.woff2') format('woff2'),
+        url('../fonts/VolvoSerif.woff') format('woff'),
+        url('../fonts/VolvoSerif.ttf') format('truetype'),
+        url('../fonts/VolvoSerif.svg#VolvoSerif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ICOMOON */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?u07ixc');
+  src:  url('../fonts/icomoon.eot?u07ixc#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?u07ixc') format('truetype'),
+    url('../fonts/icomoon.woff?u07ixc') format('woff'),
+    url('../fonts/icomoon.svg?u07ixc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}

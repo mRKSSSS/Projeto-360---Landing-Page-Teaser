@@ -1,0 +1,38 @@
+.bg-hero{
+    // background-image: url("https://images7.alphacoders.com/934/thumb-1920-934193.jpg");
+    background-size: cover;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0;
+    .grid-block{
+        display: inline-block;
+        width: 16.666%;
+        height: 160px;
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+        background-color: black;
+        opacity: 0.9;
+        background-size: cover;
+        transition: all .4s ease;
+        &:hover{
+            filter: blur(0px);
+            -webkit-filter: blur(0px);
+            // background-color: transparent;
+            opacity: 0;
+        }
+        @include custom-mq(0px, 1000px) {
+            width: 20%;                
+        }
+        @include custom-mq(0px, 700px) {
+            width: 25%;    
+        }
+        @include custom-mq(0px, 500px) {
+            width: 33.333%;    
+        }
+        @include custom-mq(0px, 400px) {
+            width: 50%;    
+        }
+    }
+}

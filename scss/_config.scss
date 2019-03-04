@@ -1,0 +1,27 @@
+/* Font Families */
+$title-font: 'VolvoBroad', sans-serif;
+$main-font: 'VolvoSans', sans-serif;
+$serif-font: 'VolvoSerif', serif;
+
+/* Font Colors */
+$white: #FFF;
+$black: #000;
+$volvo-grey: #161617;
+$darkGrey:#575555;
+$lightGrey:#979797;
+$red: #FF0000;
+$green: #12A109;
+
+
+/* General */
+body{
+	height: 100%;
+	min-height: 580px;
+}
+html{
+	height: 100%;
+	min-height: 580px;
+}
+*{
+	box-sizing: border-box;
+}

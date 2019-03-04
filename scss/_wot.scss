@@ -1,0 +1,19 @@
+.wot{
+    font-family: $main-font;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: $white;
+    h1{
+        font-size: 28px;
+        max-width: 400px;
+        margin: 0 auto 40px auto;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 17px;
+        padding: 5px 20px;
+        &:nth-of-type(2){
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.tease-hero{
+    height: 100%;
+    background-image: url('../img/tease.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .countdown > .container{
+        background-color: transparent;
+    }
+    .scroll-down{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        i{
+            display: block;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            transform-origin: 20% 40%;
+            border: solid $white;
+            border-width: 0 1px 1px 0;
+            &:nth-of-type(1){
+                animation: scrollDownAnim1 2s infinite;
+            }
+            &:nth-of-type(2){
+                animation: scrollDownAnim2 2s infinite;
+            }
+            @keyframes scrollDownAnim1{
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            @keyframes scrollDownAnim2{
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
